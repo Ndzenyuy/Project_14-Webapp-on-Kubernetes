@@ -13,6 +13,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: my-app
+            name: vproapp-service
             port:
               number: 80
