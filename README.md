@@ -307,7 +307,7 @@ This project deploys a WebApp on a kubernetes cluster hosted on AWS.
             volumes:
             - name: vpro-db-data
                awsElasticBlockStore: 
-                  volumeID: vol-0cb3dd6653eae08ec
+                  volumeID: <the volume id that was stored earlier>
                   fsType: ext4
 
             initContainers:
@@ -318,6 +318,31 @@ This project deploys a WebApp on a kubernetes cluster hosted on AWS.
                   - name: vpro-db-data
                   mountPath: /var/lib/mysql
       ```
+
+      Commit the project into a github repository.
+
+   Now edit the tags of the created ebs volume,
+   ```
+   Name: KubernetesCluster
+   value: <cluster-name> eg kubernetes.ndzenyuyjones.link
+   ```
+   3. SSH into kops instance and clone the source code
+   ```
+   git clone <project_url>
+   cd project folder
+
+   ```
+
+   4. Launch the webapp
+   ```
+   kubectl apply -f .
+   ```
+   5. Back to AWS console, onto elastic load balancer, copy the url of the ELB that has been created and search it on the browser
+   
+
+   
+
+
 
 
 
