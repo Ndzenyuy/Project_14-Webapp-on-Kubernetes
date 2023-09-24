@@ -1,6 +1,8 @@
-# Project 14: App Deployment on Kubernetes Cluster
+# Project 14: App Deployment on a Kubernetes Cluster
 
-This project deploys a WebApp on a kubernetes cluster hosted on AWS.
+This project deploys a WebApp on a kubernetes cluster hosted on AWS. In project 6, I containerized the App and stored the images on dockerhub, for this project, those images were pulled and run on a kubernetes cluster. The kubernetes cluster is deployed via a kops machine, it runs a master node and two worker nodes. The different containers run the microservices that make up the full functionality of the project, hence fully decoupled web app. Kubernetes happens to be a very smart container orchestration tool, if a pod fails, it is replaced almost immediately. In my next project, i will be implementing it in a CICD pipeline.
+
+## Architecture
 
 ## Prereqs
 - Purchase a domain for kubernetes DNS records
@@ -338,7 +340,7 @@ This project deploys a WebApp on a kubernetes cluster hosted on AWS.
    kubectl apply -f .
    ```
    5. Back to AWS console, onto elastic load balancer, copy the url of the ELB that has been created and search it on the browser
-   
+
 
    
 
