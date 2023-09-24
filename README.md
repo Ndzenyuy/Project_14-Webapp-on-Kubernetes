@@ -3,7 +3,7 @@
 This project deploys a WebApp on a kubernetes cluster hosted on AWS. In project 6, I containerized the App and stored the images on dockerhub, for this project, those images were pulled and run on a kubernetes cluster. The kubernetes cluster is deployed via a kops VM, it runs a master node and two worker nodes. The different containers run the microservices that make up the full functionality of the project, hence fully decoupled web app. Kubernetes happens to be a very smart container orchestration tool, if a pod fails, it is replaced almost immediately. In my next project, i will be implementing it in a CICD pipeline.
 
 ## Architecture
-![](architecture)
+![](https://github.com/Ndzenyuy/Project_14-Webapp-on-Kubernetes/blob/main/images/project14-architecture.jpg)
 
 ## Prereqs
 - Purchase a domain for kubernetes DNS records
@@ -329,6 +329,8 @@ This project deploys a WebApp on a kubernetes cluster hosted on AWS. In project 
    Name: KubernetesCluster
    value: <cluster-name> eg kubernetes.ndzenyuyjones.link
    ```
+   ![](https://github.com/Ndzenyuy/Project_14-Webapp-on-Kubernetes/blob/main/images/edit%20volume%20tag.png)
+   
    3. SSH into kops instance and clone the source code
    ```
    git clone <project_url>
@@ -341,7 +343,9 @@ This project deploys a WebApp on a kubernetes cluster hosted on AWS. In project 
    kubectl apply -f .
    ```
    5. Back to AWS console, onto elastic load balancer, copy the url of the ELB that has been created and search it on the browser
+   ![](https://github.com/Ndzenyuy/Project_14-Webapp-on-Kubernetes/blob/main/images/elastic%20load%20balancer%20created.png)
 
+   ![](https://github.com/Ndzenyuy/Project_14-Webapp-on-Kubernetes/blob/main/images/login%20page.png)
 
    
 
